@@ -47541,6 +47541,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['result'],
@@ -47584,8 +47586,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         addProductToBundle: function addProductToBundle(bundleid, productid) {
             var _this4 = this;
 
-            axios.post('api/bundleproducts/' + bundleid + '/' + productid).then(function () {
-                return _this4.showModal = false;
+            axios.post('api/bundleproducts/' + bundleid + '/' + productid).then(function (response) {
+                _this4.showModal = false;
             }).catch(function (e) {
                 return console.log(e);
             });
@@ -47682,7 +47684,7 @@ var render = function() {
                                 _vm._v(
                                   "\n                                        " +
                                     _vm._s(product.name) +
-                                    " "
+                                    "\n                                        "
                                 ),
                                 _c(
                                   "button",
@@ -47712,7 +47714,7 @@ var render = function() {
                                 _vm._v(
                                   "\n                                        " +
                                     _vm._s(avproduct.name) +
-                                    " "
+                                    "\n                                        "
                                 ),
                                 _c(
                                   "button",

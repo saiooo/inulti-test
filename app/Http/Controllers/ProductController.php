@@ -30,7 +30,6 @@ class ProductController extends Controller
     {
         $product = new Product();
         $product->name = $request->name;
-        $product->bundle_id = 0;
         $product->save();
 
         return response()->json($product);

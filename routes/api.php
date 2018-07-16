@@ -27,6 +27,6 @@ Route::post('products', 'ProductController@store');
 Route::get('bundleproducts/{bundleid}', 'BundleProductController@getProductsIncludedInBundle');
 Route::get('bundleproductsnot/{bundleid}', 'BundleProductController@getProductsNotIncludedInBundle');
 Route::delete('bundleproducts/{bundleid}/{productid}', 'BundleProductController@removeProductFromBundle');
-Route::post('bundleproducts/{bundleid}/{productid}', 'BundleProductController@addProductInBundle');
+Route::post('bundleproducts/{bundleid}/{productid}', 'BundleProductController@addProductToBundle');
 
 

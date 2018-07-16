@@ -41,12 +41,13 @@ class BundleProductController extends Controller
 
     }
 
-    public function addProductInBundle($bundleid, $productId) 
+    public function addProductToBundle($bundleid, $productid) 
     {
         $bundleProduct = new BundleProduct();
         $bundleProduct->bundle_id = $bundleid;
         $bundleProduct->product_id = $productid;
         $bundleProduct->save();
+        return response()->json($bundleProduct);
         
     }
 
